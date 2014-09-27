@@ -1,12 +1,12 @@
 {
   "name": "fsystemDash-node",
-    "description": "Filesystem monitoring dashboard. Allows live tracking of added, deleted, and changed files from defined directories.",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-      "express": "4.x",
-      "redis": "*",
-      "chokidar": "*"
-    }
+  "description": "Filesystem monitoring dashboard. Allows live tracking of added, deleted, and changed files from defined directories.",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "chokidar": "*",
+    "express": "4.x",
+    "moment": "^2.8.3",
+    "redis": "*"
+  }
 }
-
