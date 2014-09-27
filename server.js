@@ -1,5 +1,6 @@
 var config = require('./config'),
-    redis_client = require('redis').createClient(),
+    redis = require('redis').createClient(),
+    moment = require('moment'),
     chokidar = require('chokidar');
 
 // Server Main Code
@@ -30,7 +31,15 @@ function Server(){
 
 // Handles watcher events 
 Server.prototype.event = function(event, path, stat){
-  console.log(event, path);
+  redis.incr('key');
+  redis.get('key', function(err, res){
+    redis.hset('log:'+res, 'event', event);
+    redis.hset('log:'+res, 'path', path);
+    redis.hset('log:'+res, 'ts', moment().format());
+    redis.lpush('logs', res);
+
+    console.log(res, event, path);
+  });
 };
 
 // Handle errors
