@@ -25,6 +25,12 @@
     render: function(){
       var attr = _.clone(this.model.attributes);
 
+      if(typeof attr.size === 'undefined')
+        attr.size = 0;
+
+      attr.ts = moment(attr.ts)
+        .format("MMMM Do YYYY, h:mm:ss a");
+        
       switch(attr.event){
         case 'add':
           attr.label_title = 'Added';

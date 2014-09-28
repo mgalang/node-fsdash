@@ -33,6 +33,7 @@
             <th>Status</th>
             <th>Path</th>
             <th>Timestamp</th>
+            <th>Size</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -42,8 +43,10 @@
       <td><span class="label label{{class_suffix}}">{{label_title}}</span></td>
       <td><p class="text{{class_suffix}}">{{path}}</p></td>
       <td>{{ts}}</td>
+      <td>{{size}}B</td>
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

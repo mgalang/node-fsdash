@@ -34,7 +34,8 @@ Server.prototype.event = function(event, path, stat){
   storage.add({
     'event': event,
     'path': path,
-    'ts': moment().format()
+    'ts': moment().format(),
+    'size': (event == 'add' || event == 'change') ? stat.size : 0
   });
 };
 
