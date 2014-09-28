@@ -1,5 +1,5 @@
 {
-  "name": "fsystemDash-node",
+  "name": "node-fsdash",
   "description": "Filesystem monitoring dashboard. Allows live tracking of added, deleted, and changed files from defined directories.",
   "scripts": {
     "start": "redis-server redis.conf; forever start server.js; forever start site/app.js;",

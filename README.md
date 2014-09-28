@@ -29,6 +29,11 @@ If everything goes well, you should be able to access the dashboard at http://lo
     
     $ npm stop
 
+## TODO
+- File history
+- Optimization
+- Graph (?)
+
 ## License
 
 The MIT License (MIT)
