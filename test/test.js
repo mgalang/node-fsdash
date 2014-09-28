@@ -15,6 +15,10 @@ describe('Config', function(){
 });
 
 describe('Storage', function(){
+  it('should expose public methods', function(){
+    assert.equal(typeof storage.add, 'function');
+  });
+
   describe('#getAll', function(){
     it('should not return an error', function(done){
       storage.getAll(function(){
