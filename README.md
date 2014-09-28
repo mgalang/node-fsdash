@@ -1,13 +1,13 @@
 # Node Filesystem Dashboard
 
-Monitor and track changes of files and directories and display their status in a web dashboard.
+Monitor and track changes of files and display their status in a web dashboard.
 
 (Work in progress)
 
 ## Getting Started
     $ npm install
 
-Dependencies:
+#####Dependencies:
 
 - [Express](http://expressjs.com/)
 - [Ejs](https://github.com/visionmedia/ejs)
@@ -23,16 +23,15 @@ Dependencies:
 
     $ npm start
     
-If everything goes well, you should be able to access the dashboard at http://localhost:3000
+If start was successful, you should be able to access the dashboard at http://localhost:3000
 
 #####Stopping
     
     $ npm stop
 
 ## TODO
-- File history
 - Optimization
-- Graph (?)
+- Graph (maybe)
 
 ## License
 
