@@ -1,12 +1,21 @@
 {
   "name": "fsystemDash-node",
   "description": "Filesystem monitoring dashboard. Allows live tracking of added, deleted, and changed files from defined directories.",
+  "scripts": {
+    "start": "redis-server redis.conf; forever start server.js; forever start site/app.js;",
+    "stop": "forever stop server.js; forever stop site/app.js;"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "chokidar": "*",
     "express": "4.x",
+    "ejs": "1.0.x", 
     "moment": "^2.8.3",
-    "redis": "*"
+    "redis": "*",
+    "forever": "0.11.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
   }
 }
