@@ -22,12 +22,14 @@ Monitor and track changes of files and display their status in a web dashboard.
 #####Starting
 
     $ npm start
-    
-If start was successful, you should be able to access the dashboard at http://localhost:3000
+
 
 #####Stopping
     
     $ npm stop
+
+![Screenshot]
+(https://raw.githubusercontent.com/mgalang/node-fsdash/master/screen.png)
 
 ## TODO
 - Optimization
