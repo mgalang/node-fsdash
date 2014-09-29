@@ -4,6 +4,9 @@ Monitor and track changes of files and display their status in a web dashboard.
 
 (Work in progress)
 
+![Screenshot]
+(https://raw.githubusercontent.com/mgalang/node-fsdash/master/screen.png)
+
 ## Getting Started
     $ npm install
 
@@ -28,8 +31,7 @@ Monitor and track changes of files and display their status in a web dashboard.
     
     $ npm stop
 
-![Screenshot]
-(https://raw.githubusercontent.com/mgalang/node-fsdash/master/screen.png)
+Default dashboard url is http://localhost:3000
 
 ## TODO
 - Optimization
