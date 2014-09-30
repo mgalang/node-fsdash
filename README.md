@@ -2,8 +2,6 @@
 
 Monitor and track changes of files and display their status in a web dashboard.
 
-(Work in progress)
-
 ![Screenshot]
 (https://raw.githubusercontent.com/mgalang/node-fsdash/master/screen.png)
 
