@@ -31,6 +31,10 @@ Monitor and track changes of files and display their status in a web dashboard.
 
 Default dashboard url is http://localhost:3000
 
+## Testing
+
+    $ npm test
+
 ## TODO
 - Optimization
 - Graph (maybe)
