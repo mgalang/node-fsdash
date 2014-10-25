@@ -34,6 +34,10 @@ Edit config.js to specify the directories that you want to track.
 
 Default dashboard url is http://localhost:3000
 
+## Testing
+
+    $ npm test
+
 ## TODO
 - Optimization
 - Graph (maybe)
