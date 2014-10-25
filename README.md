@@ -20,6 +20,9 @@ Monitor and track changes of files and display their status in a web dashboard.
 
 ## Usage
 
+#####Configure
+Edit config.js to specify the directories that you want to track.
+
 #####Starting
 
     $ npm start
