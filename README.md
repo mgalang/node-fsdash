@@ -1,4 +1,4 @@
-# Simple files activity tracking using node.js
+# Simple files activity dashboard using node.js
 
 Track files activities and display their history in a web dashboard. This is still experimental and a work in progress at the moment because fs.watch is still marked as unstable and so I have to use Chokidar which is an awesome wrapper for fs.watch.
 
