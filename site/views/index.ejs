@@ -18,16 +18,29 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#"><%= title %></a>
         </div>
       </div>
     </div>
-  
+    
     <div class="container-fluid">
-      <table class="table logs-table">
+      <div class="row pull-right clearfix">
+      <form class="inline-form" id="params">
+        <label for="limit">Items to show: </label>
+        <select name="limit">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="100">100</option>
+          <option value="500">500</option>
+          <option value="1000">1000</option>
+        </select>
+      </form>
+      </div>
+
+        <table class="table logs-table">
         <thead>
           <tr>
             <th>Status</th>

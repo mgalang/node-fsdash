@@ -14,7 +14,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/logs', function(req, res) {
-  storage.getAll(function(items){
+  var _limit = (typeof req.query.limit !== 'undefined') ? req.query.limit : 100;
+  
+  storage.getAll({ limit: _limit}, function(items){
     res.json(items);
   });
 });

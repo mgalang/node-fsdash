@@ -75,7 +75,7 @@
 
     // fetch logs every second
     setInterval(function(){
-      logs.fetch();
+      logs.fetch({ data: $('#params').serialize() });
     }, 1000);
   };
 
