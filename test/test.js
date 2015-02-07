@@ -21,7 +21,7 @@ describe('Storage', function(){
 
   describe('#getAll', function(){
     it('should not return an error', function(done){
-      storage.getAll(function(){
+      storage.getAll({}, function(){
         done();
       });
     });
