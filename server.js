@@ -13,7 +13,8 @@ function Server(){
   this.watcher = chokidar
   .watch(config.dirs, { 
     ignoreInitial: true, 
-    ignored: /[\/\\]\./ 
+    ignored: /[\/\\]\./,
+    alwaysStat: true
   });
   
   this.watcher
