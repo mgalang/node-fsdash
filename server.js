@@ -1,7 +1,8 @@
 var config = require('./config'),
     moment = require('moment'),
     storage = require('./lib/storage'),
-    chokidar = require('chokidar');
+    chokidar = require('chokidar'),
+    io = require('socket.io').listen(8080);
 
 // Server Main Code
 //
@@ -32,6 +33,8 @@ function Server(){
   console.log('FSdash server started. Now watching...');
 }
 
+Server.socket = false;
+
 // Handles watcher events 
 Server.prototype.event = function(event, path, stat){
   storage.add({
@@ -40,6 +43,10 @@ Server.prototype.event = function(event, path, stat){
     'ts': moment().format(),
     'size': (typeof stat !== 'undefined' && stat) ? stat.size : 0
   });
+
+  if(this.socket){
+    this.socket.emit('update_log', { message: 'update' });
+  }
 };
 
 // Handle errors
@@ -47,4 +54,11 @@ Server.prototype.error = function(error){
   console.log(error);
 };
 
-new Server();
+// start server
+var server = new Server();
+
+// start socket.io
+io.sockets.on('connection', function (socket) {
+  // pass current socket to server socket
+  server.socket = socket;
+});

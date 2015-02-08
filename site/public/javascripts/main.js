@@ -71,12 +71,17 @@
   });
 
   var App = function(){
+    var socket = io(':8080');
     new LogItems();
 
-    // fetch logs every second
-    setInterval(function(){
-      logs.fetch({ data: $('#params').serialize() });
-    }, 1000);
+    socket.on('connect', function () {
+      socket.on('update_log', function (msg) {
+        logs.fetch({ data: $('#params').serialize() });
+        console.log('Log updated');
+      });
+    });
+
+    logs.fetch({ data: $('#params').serialize() });
   };
 
   new App();
