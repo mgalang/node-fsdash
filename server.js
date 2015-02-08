@@ -27,6 +27,8 @@ function Server(){
     _this.event('remove', path, stat);
   })
   .on('error', this.error);
+
+  console.log('FSdash server started. Now watching...');
 }
 
 // Handles watcher events 
@@ -35,7 +37,7 @@ Server.prototype.event = function(event, path, stat){
     'event': event,
     'path': path,
     'ts': moment().format(),
-    'size': (event == 'add' || event == 'change') ? stat.size : 0
+    'size': (typeof stat !== 'undefined' && stat) ? stat.size : 0
   });
 };
 
