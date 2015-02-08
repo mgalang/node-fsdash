@@ -9,12 +9,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "chokidar": "*",
+    "chokidar": "^1.0.0-rc3",
+    "ejs": "^1.0.0",
     "express": "4.x",
-    "ejs": "1.0.x", 
+    "forever": "^0.11.1",
     "moment": "^2.8.3",
-    "redis": "*",
-    "forever": "0.11.1"
+    "redis": "^0.12.1"
   },
   "devDependencies": {
     "mocha": "*"
