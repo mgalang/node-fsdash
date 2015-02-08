@@ -17,6 +17,7 @@ Track files activities and display their history in a web dashboard. This is sti
 - [Node redis](https://github.com/mranney/node_redis)
 - [Moment](https://github.com/moment/moment/)
 - [Forever](https://github.com/nodejitsu/forever)
+- [Socket.io](https://github.com/Automattic/socket.io)
 
 ## Usage
 
